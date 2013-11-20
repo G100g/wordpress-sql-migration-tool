@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Wordpress Migration Tool</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/prettify.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        
+        <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		<div class="header">
+
+			<div class="container">
+				
+				<header>
+					<h1>Wordpress Migration Tool</h1>
+					<p>Create SQL string to move a Wordpress site from a domain to another.</p>
+				</header>
+				
+				<div class="row">
+				
+					<div id="app" class="col-md-9 col-md-offset-1">
+					
+						<form class="form-horizontal" role="form">
+						  <div class="form-group">
+						    <label for="inputFrom" class="col-sm-2 control-label">From domain</label>
+						    <div class="col-sm-10">
+						      <input type="text" class="form-control" id="inputFrom" placeholder="Insert complete url of your old wordpress website">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputTo" class="col-sm-2 control-label">To domain</label>
+						    <div class="col-sm-10">
+						      <input type="text" class="form-control" id="inputTo" placeholder="and now the url to your new website">
+						    </div>
+						  </div>
+						  
+						  <div class="form-group">
+						    <label for="inputPrefix" class="col-sm-2 control-label">Tables prefix</label>
+						    <div class="col-sm-10">
+						      <input type="text" class="form-control" id="inputPrefix" placeholder="Leave blank if is wp_">
+						    </div>
+						  </div>
+						  
+						  <div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <button type="submit" class="btn btn-default">Update</button>
+						    </div>
+						  </div>
+						</form>		
+					
+					</div> <!-- #form -->
+				
+				</div> <!-- .row -->
+				
+			</div> <!-- .container -->
+		
+		</div> <!-- .header -->
+		
+		
+		<div class="container">
+		
+			<div id="footer">
+			
+				<div class="row">
+			
+					<div id="result-container" class="col-sm-10 col-sm-offset-1">
+						<pre id="result" class="prettyprint">
+					
+						<!-- UPDATE wp_options SET option_value = replace(option_value, 'http://locale', 'http://sito.com') WHERE option_name = 'home' OR option_name = 'siteurl'; UPDATE wp_posts SET guid = replace(guid, 'http://locale','http://sito.com'); UPDATE wp_posts SET post_content = replace(post_content, 'http://locale', 'http://sito.com'); UPDATE wp_postmeta SET meta_value = replace(meta_value, 'http://locale', 'http://sito.com'); -->
+						</pre>
+					</div> <!-- #result -->
+					
+				</div>
+			
+			<p id="warranty">Remember. Make a backup before run this code on your database.<br>
+Use this at your risk.</p>
+			
+			</div> <!-- #footer -->
+		
+		</div> <!-- .container -->
+		
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="assets/js/vendor/prettify.js?lang=sql"></script>
+
+        <script src="assets/js/vendor/underscore-min.js"></script>
+        <script src="assets/js/vendor/backbone-min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
