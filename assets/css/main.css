@@ -175,6 +175,13 @@ textarea {
 			background: #FFF;
 			
 		}
+		
+		.pln {
+			color: #AA0D91;
+		}
+		.str {
+			color: #C71A16;
+		}
 
 	#warranty {
 		
@@ -186,6 +193,8 @@ textarea {
 		font-style: italic;
 		
 	}
+	
+	
 	
 
 

@@ -6,11 +6,11 @@
 			
 			var result = this.sql_query;
 			
-			result = result.replace('SITEA', from);
-			result = result.replace('SITEB', to);
+			result = result.replace(/SITEA/g, from);
+			result = result.replace(/SITEB/g, to);
 			
 			if (prefix != 'wp_') {
-				result = result.replace('wp_', prefix);
+				result = result.replace(/wp\_/g, prefix);
 			}
 			
 			this.$el.html(result);
