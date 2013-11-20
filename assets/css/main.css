@@ -128,6 +128,31 @@ textarea {
 		color: #B20000;
 	}
 
+#app input,
+#app button {
+	
+	padding: 20px;
+	
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	
+	font-size: 1.2em;
+	font-style: normal;
+	outline: none;	
+	
+}
+
+	#app input::-webkit-input-placeholder {
+		font-style: italic;
+	}
+	
+	#app button {
+		padding: 10px 20px;
+		background-color: #401000;
+		color: #FFF;
+	}
+
 #footer {
 	padding-top: 40px;
 	padding-bottom: 40px;
