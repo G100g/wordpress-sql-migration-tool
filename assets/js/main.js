@@ -1,5 +1,7 @@
 ;(function ($) {
 	
+	var DEBUG = false;
+	
 	var Result = Backbone.View.extend({
 		
 		update: function (from, to, prefix) {
@@ -13,7 +15,9 @@
 				result = result.replace(/wp\_/g, prefix);
 			}
 			
-			this.$el.html(result);
+			this.$el
+				.removeClass('prettyprinted')
+				.html(result);
 			prettyPrint();
 			
 		},
@@ -47,8 +51,12 @@
 			
 			//DEBUG
 			
-			this.$inp_from.val('g100g.local/first/second/third/');
-			this.$inp_to.val('g100g.net/first//');
+			if (DEBUG) {
+			
+				this.$inp_from.val('g100g.local/first/second/third/');
+				this.$inp_to.val('g100g.net/first//');
+			
+			}
 			
 			//this.$inp_from.val('http://g100g.local/first/second/third/');
 			//this.$inp_to.val('http://g100g.net/first//');
@@ -117,12 +125,6 @@
 			
 			e.preventDefault();
 			
-			//Add http:// to urls
-			from = this.addHttp(from);
-			this.$inp_from.val(from);
-			to = this.addHttp(to);
-			this.$inp_to.val(to);
-			
 			//Remove last trailing slash from url
 			from = this.removeSlash(from);
 			this.$inp_from.val(from);
@@ -130,7 +132,12 @@
 			to = this.removeSlash(to);
 			this.$inp_to.val(to);
 			
-			
+			//Add http:// to urls
+			from = this.addHttp(from);
+			this.$inp_from.val(from);
+			to = this.addHttp(to);
+			this.$inp_to.val(to);
+						
 			//Check prefix
 			prefix = this.checkPrefix(prefix);
 			this.$inp_prefix.val(prefix);
