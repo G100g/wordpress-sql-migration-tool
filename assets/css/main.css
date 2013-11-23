@@ -131,7 +131,8 @@ textarea {
 #app input,
 #app button {
 	
-	padding: 20px;
+	padding: 10px 20px;
+	height: auto;
 	
 	border: none;
 	border-radius: 0;
