@@ -106,7 +106,6 @@ textarea {
 
 .header {
 	
-	
 	color: #FFF;
 	background-color: #FF7373;
 	text-align: center;
@@ -145,6 +144,10 @@ textarea {
 }
 
 	#app input::-webkit-input-placeholder {
+		font-style: italic;
+	}
+	
+	#app input::-moz-placeholder {
 		font-style: italic;
 	}
 	

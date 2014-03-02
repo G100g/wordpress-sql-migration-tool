@@ -11,7 +11,8 @@
 			result = result.replace(/SITEA/g, from);
 			result = result.replace(/SITEB/g, to);
 			
-			if (prefix != 'wp_') {
+			if (prefix !== 'wp_' && prefix !== '') {
+			
 				result = result.replace(/wp\_/g, prefix);
 			}
 			
